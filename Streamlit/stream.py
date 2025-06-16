@@ -1,6 +1,16 @@
 import streamlit as st
 import os 
 
+st.title("Streamlit Crash Course")
+st.header("Welcome to Streamlit")
+st.subheader("This is a subheader")
+st.text("This is a simple text message.")
+st.markdown("This is **bold** text and *italic* text.")
+st.caption("This is a caption for the text above.")
+st.latex(r"E = mc^2")
+st.code("print('Hello, World!')", language='python')
+st.divider()
+
 st.write("Hello, Streamlit!")
 st.write("Current working directory:", os.getcwd())
 
