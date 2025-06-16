@@ -25,3 +25,7 @@ print("first:",pressed)
 
 pressed2 = st.button("Sec me")
 print("Second:",pressed2)
+
+st.divider()
+
+st.image(os.path.join(os.getcwd(), "static", '1.jpg'), caption='Sample Image', use_container_width=True)
