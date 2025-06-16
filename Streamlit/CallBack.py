@@ -11,5 +11,14 @@ if st.session_state.step == 1:
     name = st.text_input("Name", value=st.session_state.info.get("name", ""))
     if st.button("Next"):
         st.session_state.info["name"] = name
-        st.session_state.step += 1
+        st.session_state.step = 2
+elif st.session_state.step == 2:
+    st.header("Review Information")
     
+    st.subheader("Please review your information:")
+    st.write(f"Name: {st.session_state.info.get('name', '')}")
+    
+    if st.button("Submit"):
+        st.session_state.info["name"] = st.session_state.name
+        st.success("Information submitted successfully!")
+        st.session_state.step = 1
