@@ -1,9 +1,13 @@
 import streamlit as st
 
-counter = 0
-st.write("Counter:", counter)
+
+if "counter" not in st.session_state:
+    st.session_state.counter = 0
 if st.button("Increment Counter"):
-    counter += 1
-    st.write("Counter:", counter)
-else:
-    st.write("Counter remains:", counter)
+    st.session_state.counter += 1
+    st.write(f"Counter Incremeted to: {st.session_state.counter}")
+if st.button("Reset Counter"):
+    st.session_state.counter = 0
+    st.write("Counter reset to 0")
+
+st.write(f"Current Counter Value: {st.session_state.counter}")
