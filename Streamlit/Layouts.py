@@ -53,3 +53,26 @@ with st.popover("This is a popover"):
 #sidebar  input handling
 if sidebar_input:
     st.sidebar.write(f"You entered: {sidebar_input}")
+    
+# button hover effect
+st.button("Hover over me", help="This button has a hover effect.")
+
+#footer example
+st.markdown(
+    """
+    <style>
+    footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+        text-align: center;
+    }
+    </style>
+    <footer>
+        <p>Footer Content right here</p>
+    </footer>
+    """,
+    unsafe_allow_html=True
+)
