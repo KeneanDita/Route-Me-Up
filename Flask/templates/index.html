@@ -22,13 +22,18 @@
                         <td>{{ task.content }}</td>
                         <td>{{ task.date_created.date() }}</td>
                         <td>
-                            <a href="#">Delete</a><br>
-                            <a href="#">Update</a>
+                            <a href="/delete/{{ task.id }}">Delete</a><br>
+                            <a href="/update/{{ task.id }}">Update</a>
+
                         </td>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>
+
+        <form action="/clear" method="POST" onsubmit="return confirm('Are you sure you want to delete all tasks?');">
+    <button type="submit" class="clear-btn">Clear All Tasks</button>
+</form>
 
         <br>
 
