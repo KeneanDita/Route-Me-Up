@@ -42,7 +42,7 @@ def update(id):
     else:
         return render_template('update.html', task=task)
 
-@app.route('/clear')
+@app.route('/clear', methods=['GET', 'POST'])
 def clear():
     try:
         db.session.query(Todo).delete()
