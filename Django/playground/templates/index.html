@@ -7,6 +7,12 @@
 </head>
 <body>
     <h1>Hello</h1>
-    {{ Greeting  }}
+    {{ Greeting }}
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% else %}
+        <p>No message provided.</p>
+    {% endif %}
 </body>
 </html>
