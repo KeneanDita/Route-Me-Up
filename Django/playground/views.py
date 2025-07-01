@@ -3,7 +3,6 @@ from django.http import HttpResponse
 
 
 def hello(request):
-    return render(request, 'index.html', {
-        'Greeting': 'Hello World',
-        'message': 'Welcome to the Django Playground!'
-    })
+    x = 1
+    y = 5
+    return render(request, 'index.html',)

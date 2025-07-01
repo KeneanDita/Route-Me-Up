@@ -25,5 +25,4 @@ def home(request):
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("playground/", include("playground.urls")),
-    path('', home),
 ]
