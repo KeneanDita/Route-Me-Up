@@ -3,4 +3,7 @@ from django.http import HttpResponse
 
 
 def hello(request):
-    return HttpResponse("Hello, world! This is a Django view.")
+    return render(request, 'index.html', {
+        'Greeting': 'Hello World',
+        'message': 'Welcome to the Django Playground!'
+    })
