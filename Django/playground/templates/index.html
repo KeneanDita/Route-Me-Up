@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Hello</h1>
-    {{ Greeting }}
-
-    {% if message %}
-        <p>{{ message }}</p>
+    {{ Greeting }} {% if message %}
+    <p>{{ message }}</p>
     {% else %}
-        <p>No message provided.</p>
-    {% endif %}
-</body>
+    <p>No message provided.</p>
+    {% endif %} {% block %}
+    <p>{{ Hi there this is the captain speaking}}</p>
+    {% endblock %}
+  </body>
 </html>
