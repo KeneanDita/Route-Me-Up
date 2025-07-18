@@ -1,0 +1,18 @@
+FROM baseImage
+LABEL maintainer="Kenean Dita"
+# Set working directory
+WORKDIR /app
+
+# Copy application files
+# Assuming the application files are in the current directory
+
+COPY . /app
+
+# Install dependencies (example for Node.js)
+# RUN npm install
+
+# Expose application port
+EXPOSE 3000
+
+# Start the application (example for Node.js)
+# CMD ["npm", "start"]
