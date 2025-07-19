@@ -3,3 +3,5 @@ Django/storefront/__pycache__
 Django/playground/__pycache__
 
 .ipynb_checkpoints/
+
+env/
