@@ -5,5 +5,7 @@ for i in range(1, 101):
         print("Fizz")
     elif i % 5 == 0:
         print("Buzz")
+    elif i % 7 == 0:
+        print("Bazz")
     else:
         print(i)
