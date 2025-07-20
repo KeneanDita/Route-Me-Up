@@ -1,11 +1,11 @@
 for i in range(1, 101):
-    if i % 3 == 0 and i % 5 == 0:
-        print("Fizz Buzz")
-    elif i % 3 == 0:
-        print("Fizz")
-    elif i % 5 == 0:
-        print("Buzz")
-    elif i % 7 == 0:
-        print("Bazz")
-    else:
-        print(i)
+    out = ""
+    if i % 3 == 0:
+        out += "Fizz"
+    if i % 5 == 0:
+        out += "Buzz"
+    if i % 7 == 0:
+        out += "Bazz"
+    if out == "":
+        out = str(i)
+    print(out)
