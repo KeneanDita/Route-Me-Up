@@ -1,7 +1,7 @@
 import cv2 as cv
 import os
 
-img_path = os.path.join("assets", "1.jpg")
+img_path = os.path.join("Open CV/assets", "1.jpg")
 img = cv.imread(img_path)
 
 if img is None:
