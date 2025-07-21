@@ -1,11 +1,9 @@
 import cv2 as cv
-import os
 
-img_path = os.path.join("Open CV/assets", "1.jpg")
-img = cv.imread(img_path)
+img = cv.imread("Open CV/assets/1.jpg")
 
 if img is None:
-    raise FileNotFoundError(f"Image not found at: {img_path}")
+    raise FileNotFoundError(f"Image not found.")
 
 cv.imshow("Mustang", img)
 cv.waitKey(0)
