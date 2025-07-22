@@ -1,3 +1,4 @@
+# note that to see you changes you must restart the server. that's how gradio works
 import gradio as gr
 
 
