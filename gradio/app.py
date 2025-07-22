@@ -5,6 +5,11 @@ def greet(name):
     return f"Hello {name}!"
 
 
-demo = gr.Interface(fn=greet, inputs="text", outputs="text")
+# text, image ,audio, video, dataframe, file, json, html, markdown, component
+demo = gr.Interface(
+    fn=greet,
+    inputs=gradio.Textbox(label="Enter your name"),
+    outputs=gr.Textbox(label="Greeting"),
+)
 
 demo.launch()
