@@ -1,15 +1,26 @@
 import gradio as gr
 
 
-def greet(name):
-    return f"Hello {name}!"
+def greet(name, is_morning, temperature):
+    salutation = "Good morning" if is_morning else "Hello"
+    greeting = (
+        f"{salutation}, {name}! The temperature is {temperature} degrees Fahrenheit."
+    )
+    celsius = (temperature - 32) * 5 / 9
+    return greeting, round(celsius, 2)
 
 
-# text, image ,audio, video, dataframe, file, json, html, markdown, component
 demo = gr.Interface(
     fn=greet,
-    inputs=gr.Textbox(label="Enter your name"),
-    outputs=gr.Textbox(label="Greeting"),
+    inputs=[
+        gr.Textbox(label="Name"),
+        gr.Checkbox(label="Is it morning?"),
+        gr.Slider(0, 100, label="Temperature"),
+    ],
+    outputs=[
+        gr.Textbox(label="Greeting"),
+        gr.Number(label="Rounded Temp (°C)"),
+    ],
 )
 
 demo.launch()
