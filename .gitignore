@@ -1,6 +1,7 @@
 Flask/__pycache__/
 Django/storefront/__pycache__
 Django/playground/__pycache__
+__pycache__
 
 .ipynb_checkpoints/
 
