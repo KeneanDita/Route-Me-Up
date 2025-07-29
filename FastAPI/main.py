@@ -20,16 +20,6 @@ class RouteRequest(BaseModel):
     waypoints: list[str] = []
 
 
-@app.post("/route")
-async def get_route(request: RouteRequest):
-    try:
-        route = {
-            "start": request.start,
-            "end": request.end,
-            "waypoints": request.waypoints,
-            "distance": 42.0,
-            "duration": 3600,
-        }
-        return JSONResponse(content=route)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+@app.get("/")
+def home():
+    return {"data": "this is working fully"}
