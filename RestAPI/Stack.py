@@ -11,7 +11,7 @@ data = response.json()
 
 # The questions are inside the "items" key
 questions = data["items"]
-
+type(questions)
 # Convert to DataFrame
 df = pd.DataFrame(questions)
 
