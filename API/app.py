@@ -32,5 +32,11 @@ def drinks():
     return {"drinks": output}
 
 
+@app.route("/drinks/<id>")
+def get_drink(id):
+    drink = Drink.query.get_or_404(id)
+    return {"name": drink.name, "description": drink.description}
+
+
 if __name__ == "__main__":
     app.run(debug=True)
