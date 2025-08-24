@@ -22,7 +22,14 @@ def home():
 
 @app.route("/drinks")
 def drinks():
-    return {"drinks": ["coffee", "tea", "water"]}
+    drinks = Drink.query.all()
+    output = []
+
+    for drink in drinks:
+        drink_data = {"name": drink.name, "description": drink.description}
+        output.append(drink_data)
+
+    return {"drinks": output}
 
 
 if __name__ == "__main__":
