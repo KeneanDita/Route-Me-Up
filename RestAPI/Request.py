@@ -6,4 +6,9 @@ response = requests.get(
 )
 
 for data in response.json()["items"]:
-    print(data["title"])
+    if data["answer_count"] == 0:
+        print(data["title"])
+        print(data["link"])
+    else:
+        print("Answered")
+    print()
