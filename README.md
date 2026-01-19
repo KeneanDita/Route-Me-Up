@@ -21,7 +21,7 @@ My goal: To become fluent in the technologies and patterns used by real-world ML
 - ✅ Experiment tracking (Weights & Biases, MLflow)
 - ✅ Model evaluation and diagnostics
 - ✅ Deployment (Flask, FastAPI, Streamlit)
-- 🔄 Containerization & Docker
+- ✅ Containerization & Docker
 - 🔄 ML system design & MLOps
 
 ---
