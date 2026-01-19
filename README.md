@@ -1,4 +1,4 @@
-# Route-Me-Up - Becoming a Machine Learning Engineer
+# Route-Me-Up
 
 **Route-Me-Up** is my ongoing journey to mastering the skills, frameworks, and systems needed to become a **machine learning engineer** - not just a model builder, but a production-ready practitioner.
 
